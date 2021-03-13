@@ -10,7 +10,7 @@ function componentName() {
         <nav>
         <a href="/Shop">Shop</a>
         <a href="/Order">Order Review</a>
-        <a href="/Manage">Manage Inventory</a>
+        <a href="/Inventory">Manage Inventory</a>
        
 
         </nav>

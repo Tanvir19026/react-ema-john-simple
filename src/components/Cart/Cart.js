@@ -1,20 +1,26 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
+
+
 
 const Cart = (props) => {
     const cart=props.cart;
-   const total= cart.reduce( (total,product) => total + product.price, 0);
-     const Total= total.toFixed(2);
+//    const total= cart.reduce( (total,product) => total + product.price*product.quantity, 0);
+//      const Total= total.toFixed(2);
+     
+    
 
      
-//      let Total=0;
-//  for(let i=0;i<cart.length;i++)
-//  {
-//      const product=cart[i];
-//       Total=Total+product.price;
-//       Total.toFixed(2);
+     let Total=0; 
+ for(let i=0;i<cart.length;i++)
+ {
+     const product=cart[i];
+      Total=Total+product.price*product.quantity;
+      Total.toFixed(2);
 
-    
-//  }
+ }
+
 
  let shippingCost=0;
  if(Total > 35)
@@ -49,9 +55,13 @@ const Cart = (props) => {
         <p>product price : {Total}</p>
         <p>shippingCost:{shippingCost}</p>
         <p>tax:{tax}</p>
-        <p> total:{grand}</p>
-       
         
+        <p> total:{grand}</p>
+        <br/>
+      
+        {
+            props.children
+        }
         
         </div>
     );
