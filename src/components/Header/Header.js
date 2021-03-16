@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import logo from '../../images/logo.png';
 import './Header.css';
 
@@ -8,9 +9,9 @@ function componentName() {
         <img src={logo} alt=""/>
 
         <nav>
-        <a href="/Shop">Shop</a>
-        <a href="/Order">Order Review</a>
-        <a href="/Inventory">Manage Inventory</a>
+        <Link to="/Shop">Shop</Link>
+        <Link to="/Order">Order Review</Link>
+        <Link to="/Inventory">Manage Inventory</Link>
        
 
         </nav>
